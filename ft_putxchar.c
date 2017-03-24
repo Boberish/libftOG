@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.c                                           :+:      :+:    :+:   */
+/*   ft_putxchar.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaylor <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/06 18:26:25 by jaylor            #+#    #+#             */
-/*   Updated: 2017/03/08 14:38:38 by jaylor           ###   ########.fr       */
+/*   Created: 2017/02/07 10:03:15 by jaylor            #+#    #+#             */
+/*   Updated: 2017/03/11 21:10:40 by jaylor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-intmax_t	ft_abs(intmax_t n)
+int		ft_putxchar(char c, int n, int *ret)
 {
+	int	i;
+
+	i = 0;
 	if (n < 0)
-		return (n * -1);
-	return (n);
+		return (0);
+	while (n--)
+	{	
+		ft_putchar(c);
+		*ret += 1;
+		i++;
+	}
+	return (i);
 }

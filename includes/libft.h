@@ -6,7 +6,7 @@
 /*   By: jaylor <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/28 09:10:04 by jaylor            #+#    #+#             */
-/*   Updated: 2017/03/24 11:08:39 by jaylor           ###   ########.fr       */
+/*   Updated: 2017/01/27 14:06:14 by jaylor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,43 +16,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
-# include <stdarg.h>
-# include "libft.h"
-typedef struct      s_print
-{
-    int             just;
-    char            sign;
-    char            *s;
-    char            *eval;
-    int             i;
-    va_list         ap;
-    int             spa;
-    int             pad;
-    int             hash;
-    int             wid;
-    int             prec;
-    int             len;
-    int             h;
-    int             hh;
-    int             lh;
-    int             l;
-    int             ll;
-    int             z;
-    int             j;
-    char            spe;
-    size_t          slen;
-    intmax_t      ifree;
-    int             neg;
-    int             ilen;
-    char            *ms;
-    int             *ret;
-    int             cast;
-    uintmax_t       inofree;
-
-
-
-}                   t_print;
-
 
 typedef struct		s_list
 {
@@ -63,7 +26,7 @@ typedef struct		s_list
 size_t				ft_strlen(const char *s);
 void				ft_putstr(char const *s);
 void				ft_putchar(char c);
-void				ft_putnbr(intmax_t n);
+void				ft_putnbr(int n);
 int					ft_atoi(const char *str);
 char				*ft_strcat(char *s1, const char *s2);
 char				*ft_strcpy(char *dest, const char *src);
@@ -86,9 +49,9 @@ char				*ft_strsub(char *s, unsigned int start, size_t len);
 char				*ft_strnstr(const char *big,
 		const char *little, size_t len);
 void				ft_strrev(char *s);
-int					ft_intlen(intmax_t n);
+int					ft_intlen(int n);
 char				*ft_itoa(int n);
-intmax_t			ft_abs(intmax_t n);
+int					ft_abs(int n);
 void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
@@ -126,16 +89,4 @@ char				*ft_strchr(const char *s, int c);
 int					ft_count_words(char *s, char c);
 char				*ft_trim_end(char *str);
 char				*ft_strndup(const char *s1, size_t n);
-char				*ft_strchrfull(const char *s, char *c);
-int					ft_first(char *s, char c);
-int				ft_putxchar(char c, int n, int *ret);
-void				ft_abvpn(int n);
-int					ft_unintlen(uintmax_t n);
-void				ft_pfpchar(char c, int *ret);
-char					*ft_allup(char *s);
-int		ft_print(char *format, ...);
-int strprint(t_print *h);
-int ftsort(t_print *h);
-int parse(t_print *h);
-
 #endif

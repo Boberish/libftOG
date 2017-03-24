@@ -1,20 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.c                                           :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaylor <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/06 18:26:25 by jaylor            #+#    #+#             */
-/*   Updated: 2017/03/08 14:38:38 by jaylor           ###   ########.fr       */
+/*   Created: 2016/11/29 18:13:56 by jaylor            #+#    #+#             */
+/*   Updated: 2017/02/05 10:39:46 by jaylor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-intmax_t	ft_abs(intmax_t n)
+char	*ft_strchrfull(const char *s, char *c)
 {
-	if (n < 0)
-		return (n * -1);
-	return (n);
+	int		i;
+	int		j;
+
+	j = 0;
+	i = 0;
+	while (c[j])
+	{	
+		while (s[i])
+		{
+			if (s[i] == c[j])
+				return (&c[j]);
+			i++;
+		}
+		i = 0;
+		j++;
+	}
+	return (NULL);
 }

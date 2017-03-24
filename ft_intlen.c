@@ -6,13 +6,13 @@
 /*   By: jaylor <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/06 14:50:41 by jaylor            #+#    #+#             */
-/*   Updated: 2016/12/07 20:53:17 by jaylor           ###   ########.fr       */
+/*   Updated: 2017/03/08 14:37:51 by jaylor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_intlen(int n)
+int	ft_intlen(intmax_t n)
 {
 	int i;
 
@@ -23,7 +23,6 @@ int	ft_intlen(int n)
 		return (11);
 	if (n < 0)
 	{
-		i++;
 		n *= -1;
 	}
 	while (n)

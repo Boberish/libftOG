@@ -1,20 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.c                                           :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaylor <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/06 18:26:25 by jaylor            #+#    #+#             */
-/*   Updated: 2017/03/08 14:38:38 by jaylor           ###   ########.fr       */
+/*   Created: 2017/01/26 14:14:00 by jaylor            #+#    #+#             */
+/*   Updated: 2017/01/27 14:05:05 by jaylor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-intmax_t	ft_abs(intmax_t n)
+char	*ft_strndup(const char *s1, size_t n)
 {
-	if (n < 0)
-		return (n * -1);
-	return (n);
+	char	*str;
+	char	*temp;
+
+	if (!(str = (char*)malloc(sizeof(char) * (n + 1))))
+		return (NULL);
+	temp = str;
+	while (n > 0)
+	{
+		*temp = *s1;
+		temp++;
+		s1++;
+		n--;
+	}
+	*temp = '\0';
+	return (str);
 }

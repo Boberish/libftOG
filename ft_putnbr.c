@@ -6,15 +6,15 @@
 /*   By: jaylor <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/27 12:36:20 by jaylor            #+#    #+#             */
-/*   Updated: 2016/12/07 22:13:29 by jaylor           ###   ########.fr       */
+/*   Updated: 2017/03/08 13:28:30 by jaylor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr(int n)
+void	ft_putnbr(intmax_t n)
 {
-	long	nb;
+	intmax_t	nb;
 
 	nb = n;
 	if (nb < 0)
@@ -32,3 +32,8 @@ void	ft_putnbr(int n)
 		ft_putchar(nb + '0');
 	}
 }
+/*
+int main()
+{
+	ft_putnbr(2200000000);
+}*/
